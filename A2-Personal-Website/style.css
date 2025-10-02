@@ -64,6 +64,8 @@ header div{
 
 header p, header nav{
     align-self: center;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
 }
 
 nav a{
@@ -113,4 +115,71 @@ nav a:hover{
 
 a:hover{
     transform: scale(1.2);
+}
+
+
+/*600 px*/
+@media (min-width: 37.5rem){
+    header p{
+        margin-left: .5rem;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+        font-size: 3rem;
+        margin-left: 1.5rem;
+    }
+
+    nav a{
+        font-size: 1.5rem;
+        padding: .5rem 1rem;
+        border-radius: 2rem;
+    }
+
+    nav{
+        margin-right: 1.5rem;
+    }
+}
+
+/*900 px*/
+@media(min-width: 56.25rem){
+    #skills{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+    }
+
+    #skills div{
+        padding: 0rem 1rem;
+        border-width: .2rem;
+        border-color: #c1bec5;
+        border-style: solid;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #work, #projects{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+    }
+
+    .work-card{
+        padding: 0rem 1rem;
+        border-width: .2rem;
+        border-color: #c1bec5;
+        border-style: solid;
+        border-radius: 1rem;
+    }
+
+    h2{
+        margin-bottom: 1rem;
+    }
+
+    #external{
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        column-gap: 3rem;
+    }
+
 }
