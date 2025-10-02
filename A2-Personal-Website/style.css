@@ -1,0 +1,44 @@
+body{
+    background-color: #3B1769;
+    margin: 0;
+}
+
+.content-body{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+h1{
+    color: #0FC100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2, h3, h4, p, ul, li{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+a{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-width: .1rem;
+    border-radius: 1rem;
+    border-color: white;
+    border-style: solid;
+    text-decoration: none;
+    font-size: 1rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    padding-left: .3rem;
+    padding-right: .3rem;
+}
+
+header div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+footer{
+    padding-bottom: 3rem;
+}
