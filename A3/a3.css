@@ -1,0 +1,7 @@
+.variable-card{
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: .2rem;
+    border-color: white;
+    padding: 1rem;
+}
