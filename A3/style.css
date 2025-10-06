@@ -219,7 +219,7 @@ text{
 
 }
 
-/*900 px*/
+/*1200 px*/
 @media(min-width: 75rem){
     h1{
         font-size: 3rem;
