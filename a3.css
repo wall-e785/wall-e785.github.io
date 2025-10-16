@@ -1,0 +1,65 @@
+#visualization-intro{
+    text-align: center;
+}
+
+.variable-card{
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: .1rem;
+    border-color: #c1bec5;
+    padding: 1rem;
+}
+
+#variable-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+
+#a3-content h2{
+    text-align: center;
+}
+
+.a3-container{
+    text-align: center;
+}
+
+.a3-container div{
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+
+.a3-container p{
+    max-width: 50rem;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*600 px*/
+@media (min-width: 37.5rem){
+    #variable-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+    }
+}
+
+
+/*900 px*/
+@media(min-width: 56.25rem){
+    #variable-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1rem;
+    }
+
+    .a3-container h3{
+        font-size: 1.5rem;
+    }
+
+    .a3-container p{
+        font-size: 1.1rem;
+    }
+}

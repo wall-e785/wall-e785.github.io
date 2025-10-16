@@ -19,3 +19,26 @@ clickable.addEventListener('click', () =>{
     }, 2000);
 });
 
+let a2Button = document.getElementById("a2");
+let a3Button = document.getElementById("a3");
+
+a2Button.parentElement.classList.remove("hidden");
+
+let a2Content = document.getElementById("a2-content");
+let a3Content = document.getElementById("a3-content");
+a3Content.classList.add("hidden");
+
+a2Button.addEventListener('click', () => {
+    if(a2Content.classList.contains("hidden")){
+        a2Content.classList.remove("hidden");
+        a3Content.classList.add("hidden");
+    }
+});
+
+a3Button.addEventListener('click', () => {
+    let a3Content = document.getElementById("a3-content");
+    if(a3Content.classList.contains("hidden")){
+        a3Content.classList.remove("hidden");
+        a2Content.classList.add("hidden");
+    }
+});
