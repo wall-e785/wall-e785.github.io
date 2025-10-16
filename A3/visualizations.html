@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <link rel="stylesheet" href="a3.css">
     <link rel="stylesheet" href="style.css">
     <title>IAT 355 - Wallace Chau</title>
+    <script>
+        const options = {
+            config: {},
+            init: (view) => {
+            view.tooltip(new vegaTooltip.Handler().call);
+            },
+            view: {
+            loader: vega.loader({
+                baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/",
+            }),
+            renderer: "canvas",
+            },
+        };
+        vl.register(vega, vegaLite, options);
+    </script>
 </head>
 <body>
     <header>
@@ -26,8 +47,11 @@
             <button id="a2">Assignment 2</button>
             <button id="a3">Assignment 3</button>
         </div>
-        
+    </div>
 
+    <hr>
+
+    <div class="content-body">
         <div id="a2-content">
             <h2>Bar Chart</h2>
             <p>My Steps After Rotting in My Room Doing Remote Work/Homework All Week (Sept. 21 - 27)</p>
@@ -93,155 +117,26 @@
         </div>
 
         <div id="a3-content">
-            <h2>Visualizations with Vega-Lite</h2>
-            <h3>About the Data</h3>
-            <p>This dataset is a collection of video game sales data. It contains the following variables:</p>
+            <h2>A3: Vega-Lite Intro</h2>
 
-            <div id="variable-cards">
-                <div class="variable-card">
-                    <h4>Name</h4>
-                    <p>The title of the video game</p>
-                    <p>Type: Nominal</p>
-                </div>
-
-                <div class="variable-card">
-                    <h4>Platform</h4>
-                    <p>Which system the game was made for</p>
-                    <p>Type: Nominal, Categorical</p>
-                </div>
-
-                <div class="variable-card">
-                    <h4>Year</h4>
-                    <p>The year the game was released</p>
-                    <p>Type: Ordinal, Quantitative</p>
-                </div>
-
-                <div class="variable-card">
-                    <h4>Genre</h4>
-                    <p>The genre of the video game</p>
-                    <p>Type: Nominal, Categorical</p>
-                </div>
-
-                <div class="variable-card">
-                    <h4>Publisher</h4>
-                    <p>The publisher of the video game</p>
-                    <p>Type: Nominal, Categorical</p>
-                </div>
-
-                <div class="variable-card">
-                    <h4>NA_Sales</h4>
-                    <p>Sales in North America (in millions of units)</p>
-                    <p>Type: Quantitative</p>
-                </div>
-
-                <div class="variable-card">
-                    <h4>EU_Sales</h4>
-                    <p>Sales in Europe (in millions of units)</p>
-                    <p>Type: Quantitative</p>
-                </div>
-
-                <div class="variable-card">
-                    <h4>JP_Sales</h4>
-                    <p>Sales in Japan (in millions of units)</p>
-                    <p>Type: Quantitative</p>
-                </div>
-
-                <div class="variable-card">
-                    <h4>Other_Sales</h4>
-                    <p>Sales in other regions (in millions of units)</p>
-                    <p>Type: Quantitative</p>
-                </div>
-
-                <div class="variable-card">
-                    <h4>Global_Sales</h4>
-                    <p>Total global sales (in millions of units)</p>
-                    <p>Type: Quantitative</p>
-                </div>
+            <div class="a3-container">
+                <h3>Visualization 1: Create a visualization to explore global sales by genre and platform.</h3>
+                <div id="view"></div>
             </div>
 
-            <h3>Insights</h3>
-            <div class="insight-card">
-                <h4>Platform</h4>
-                <h5>Tendencies</h5>
-                <p>Most Common:</p>
-                <p>Least Common:</p>
-                <h5>Spread/Variability</h5>
-                <p>Range:</p>
+            <div class="a3-container">
+                <h3>Visualization 2: Visualize sales trends over time, focusing on platforms and genres.</h3>
+                <div id="view2"></div>
             </div>
 
-            <div class="insight-card">
-                <h4>Year</h4>
-                <h5>Tendencies</h5>
-                <p>Mean:</p>
-                <p>Median:</p>
-                <p>Mode:</p>
-                <h5>Spread/Variability</h5>
-                <p>Range:</p>
-                <p>Standard Deviation:</p>
+            <div class="a3-container">
+                <h3>Visualization 3: Compare the sales between different regions (NA, EU, JP, and Others) by platform.</h3>
+                <div id="view3"></div>
             </div>
 
-            <div class="insight-card">
-                <h4>Publisher</h4>
-                <h5>Tendencies</h5>
-                <p>Most Common:</p>
-                <p>Least Common:</p>
-                <h5>Spread/Variability</h5>
-                <p>Range:</p>
-            </div>
-            
-            <div class="insight-card">
-                <h4>NA_Sales</h4>
-                <h5>Tendencies</h5>
-                <p>Mean:</p>
-                <p>Median:</p>
-                <p>Mode:</p>
-                <h5>Spread/Variability</h5>
-                <p>Range:</p>
-                <p>Standard Deviation:</p>
-            </div>
-
-            <div class="insight-card">
-                <h4>EU_Sales</h4>
-                <h5>Tendencies</h5>
-                <p>Mean:</p>
-                <p>Median:</p>
-                <p>Mode:</p>
-                <h5>Spread/Variability</h5>
-                <p>Range:</p>
-                <p>Standard Deviation:</p>
-            </div>
-            
-            <div class="insight-card">
-                <h4>JP_Sales</h4>
-                <h5>Tendencies</h5>
-                <p>Mean:</p>
-                <p>Median:</p>
-                <p>Mode:</p>
-                <h5>Spread/Variability</h5>
-                <p>Range:</p>
-                <p>Standard Deviation:</p>
-            </div>
-
-            <div class="insight-card">
-                <h4>Other_Sales</h4>
-                <h5>Tendencies</h5>
-                <p>Mean:</p>
-                <p>Median:</p>
-                <p>Mode:</p>
-                <h5>Spread/Variability</h5>
-                <p>Range:</p>
-                <p>Standard Deviation:</p>
-            </div>
-            
-            <div class="insight-card">
-                <h4>Global_Sales</h4>
-                <h5>Tendencies</h5>
-                <p>Mean:</p>
-                <p>Median:</p>
-                <p>Mode:</p>
-                <h5>Spread/Variability</h5>
-                <p>Range:</p>
-                <p>Standard Deviation:</p>
+            <div class="a3-container">
+                <h3>Visualization 4: Compare the global sales between the Wii and WiiU.</h3>
+                <div id="view4"></div>
             </div>
         </div>
     </div>
@@ -259,6 +154,7 @@
            
     <script src="main.js" type="text/JavaScript"></script>
     <script src="vis.js" type="text/JavaScript"></script>
+    <script type="module" src="a3.js"></script>
     
 </body>
 

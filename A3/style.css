@@ -1,5 +1,5 @@
 body{
-    background-color: #3B1769;
+    background-color: #efefef;
     margin: 0;
 }
 
@@ -15,7 +15,7 @@ h1{
 }
 
 h2, h3, h4, p, ul, li{
-    color: white;
+    color: grey;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -43,11 +43,11 @@ li{
 
 
 a{
-    color: white;
+    color: grey;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-width: .1rem;
     border-radius: 1rem;
-    border-color: white;
+    border-color: grey;
     border-style: solid;
     text-decoration: none;
     font-size: 1rem;
@@ -133,7 +133,7 @@ rect{
 text{
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    fill: white;
+    fill: grey;
 }
 
 .purple{
@@ -141,7 +141,7 @@ text{
 }
 
 .too-short{
-    fill: white;
+    fill: grey;
 }
 
 .hidden{

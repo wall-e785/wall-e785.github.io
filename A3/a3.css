@@ -12,6 +12,9 @@
     row-gap: 1rem;
 }
 
+#a3-content{
+}
+
 /*600 px*/
 @media (min-width: 37.5rem){
     #variable-cards{
