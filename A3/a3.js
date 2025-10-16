@@ -1,5 +1,4 @@
 async function run() {
-  console.log("Fetching data...");
   const datawide = await d3.csv("./dataset/videogames_wide.csv");
   const datalong = await d3.csv("./dataset/videogames_long.csv");
   const wiiGames = await d3.csv("./dataset/wiiGames.csv");

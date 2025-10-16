@@ -42,7 +42,7 @@ li{
 }
 
 
-a{
+a, button{
     color: grey;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-width: .1rem;
@@ -109,6 +109,12 @@ a{
     transition: transform .2s;
 }
 
+button{
+    transition: transform .2s;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
 .hoverable{
     transition: transform .2s;
 }
@@ -118,6 +124,10 @@ a{
 }
 
 a:hover{
+    transform: scale(1.05);
+}
+
+button:hover{
     transform: scale(1.05);
 }
 
@@ -159,7 +169,7 @@ text{
         margin-left: 1.5rem;
     }
 
-    nav a{
+    nav a, button{
         font-size: 1.5rem;
         padding: .5rem 1rem;
         border-radius: 2rem;
